@@ -1,0 +1,14 @@
+<div class="details-page" *ngIf="productData != undefined">
+  <div class="card">
+    <h3>{{ productData.productName }}</h3>
+    <img class="item-image" src="{{ productData.imgUrl }}" alt="product" />
+    <h6>{{ productData.description }}.</h6>
+    <div>
+      <span class="price">Price :</span>
+      <span class="price">{{ productData.price }}</span> ||
+      <span class="price">Availability :</span>
+      <span class="price">{{ productData.availability }}</span>
+    </div>
+    <p *ngIf="productData.availability != 'O'"><button>Add to Cart</button></p>
+  </div>
+</div>
